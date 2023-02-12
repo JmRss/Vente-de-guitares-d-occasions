@@ -1,0 +1,73 @@
+.filters {
+    display: inline-flex;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.filters img {
+    background-color:$color_terciary;
+    border: $color_four 2px solid;
+    box-shadow: 3px 3px 5px $color_four;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+h2{
+    font-size: 19px;
+    font-weight: 700;
+}
+.filters_box {
+    display: inline-flex;
+    height: 50px;
+    min-width: 200px;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    padding-right: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    color:$color_primary;
+    border: solid $color_four 2px;
+    background-color: white;
+    border-image: initial;
+    border-left: none;
+    border-radius: 35px;
+}
+.filters_box:hover{
+    background-color: $color_five;
+}
+.enable{
+    background-color: $color_five;
+}
+.brand{
+    width:160px;
+    min-width: 160px;
+    h2, a{
+        margin-right: 20px;
+    }
+    a{
+        display: none;
+    }
+    
+}
+.brand:hover{
+    transition: all 600ms ease;
+    width: 500px;
+    a{
+        opacity: 0;
+        animation: filter 600ms 300ms ease both;
+        display: inline;
+        color: $color_primary;
+    }
+}
+//animation pour l'icone reset du filtre
+.reset:hover{
+    img{
+        animation: reset 600ms ease both;
+    }
+    
+}

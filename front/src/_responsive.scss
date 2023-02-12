@@ -1,0 +1,346 @@
+@import './utils/variable';
+
+@media all and (max-width: 1200px){
+    #root{
+        /*** container page produit ****/
+        .container_product{
+            height: auto;
+            justify-content: center;
+            padding: 0;
+            padding-top: 50px;
+            
+        }
+        .container_product_img{
+            margin-right:50px;
+        }
+    }
+}
+@media all and (max-width : 900px){
+    body {
+            margin: 0;
+        }
+   #root{
+    /*** container page produit ****/
+        .container_product {
+            justify-content: center;
+        }
+
+    header{
+        border-radius: 0px 0px 10px 10px;
+    }
+    /**** titre Site + Logo****/
+    header h1{
+        font-size: 20px;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    /*** text slogan ***/
+    .section-top p{
+        height:auto;
+        width:100%;
+        font-size: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .filters{
+        margin: 0;
+        margin-top: 40px;
+        display: block;
+  
+        h2{
+            padding-left: 20px;
+            width:100%;
+            box-sizing: border-box;
+        }
+    }
+    /******  container Nos occasions + les plus appréciés ******/
+    .container_article{
+        flex-direction: column-reverse;
+    }
+    /****** container Nos occasions ****/
+    .cards{
+        width:auto;
+        height: auto;
+        justify-content: center;
+        background: $color_terciary;
+        padding: 0;
+        /*titre "Nos occasions" ***/
+        .hebergement{
+            font-size: 30px;
+            text-align: center;
+            background-color: white;
+            padding:0px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .card{
+            margin: 5%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+    }
+    /***** card dans "les plus appréciés" ******/
+    .cards_right{
+        width:100%;
+        height:auto;
+        padding-bottom: 50px;
+        flex-direction: row;
+        justify-content: center;
+        background: linear-gradient(0.35turn, darken($color_four, $amount: 10), darken($color_primary, $amount: 10), darken($color_four, $amount: 10));
+        color: $color_terciary;
+        border-radius: 0px;
+        margin-bottom: 80px;
+        .card{
+            background-color: white;
+            height: 200px;
+            width: 245px;
+            box-shadow: rgb(202 202 202) 2px 3px 15px;
+            color: black;
+            border-radius: 20px;
+            margin: 5%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            text-decoration: none;
+            position: relative;
+            transform: perspective(1000px) scale(1);
+            transition: all 600ms ease-out;
+            overflow: hidden;
+            z-index: 1;
+            flex-direction: column;
+            img{
+                height: 123px;
+                width: 100%;
+                box-sizing: border-box;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: white;
+                border-image: initial;
+            }           
+        }      
+    }
+    /*** card page panier****/
+    
+    .card_basket--text{
+        width:50%;
+        align-items: flex-start;
+    }
+    .card_basket h3{
+        text-align: left;
+    }
+    /***** bouton supprimer sur page panier ****/
+    .card_basket .delete_product{
+        width:20%;
+        bottom:25px;
+    }
+    section .container_basket a .price{
+        width:auto;
+    }
+    footer{
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+   }
+}
+@media all and (max-width:880px) {
+    #root {
+
+        /*** container page produit ****/
+        .container_product {
+            justify-content: center;
+        }
+
+        .container_product_img {
+            margin-right: 0px;
+        }
+        .container__nav-bar ul{
+            flex-wrap: wrap;
+            height:auto;
+            font-size: 15px;
+        }
+        /**** filtre page product ****/
+        .nav-link{
+            min-width: 30%;
+            height: 50px;
+        }
+        .nav-link:hover{
+            background-color:white;
+            color:$color_secondary;
+            text-transform: uppercase;
+        }
+     
+    }
+}
+@media all and (max-width: 690px){
+    #root{
+        header h1 {
+            font-size: 15px;
+        }
+        /***** nav menu burger principale ****/
+        header .onglet {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            right:-100vw;
+            bottom:0;
+            height: 100vh;
+            z-index: 99;
+            background-color: $color_terciary;
+            position: fixed;
+            visibility: hidden;
+            transition: all 300ms;
+        }
+        header .onglet.show-nav {
+            right:0;
+            width: 100vw;
+            visibility: visible;
+            transition: all 300ms;
+        }
+    
+        /**** Liens du menu principal ****/
+        .bestsell,.list,.cart {
+            display: block;
+            border-top: none;
+            box-sizing: border-box;
+            padding-bottom: 40px;
+            margin: 0;
+        }
+        .bestsell::after,.list::after{
+            content: '';
+            display: block;
+            margin: 0 auto;
+            margin-top:40px;
+            width: 4vw;
+            height: 1px;
+            background-color: $color_secondary;
+        }
+        /*** bar menu burger ****/
+        .navbar__burger {
+            display: block;
+            top:2rem;
+            right:1rem;
+            position: fixed;
+            visibility: visible;
+        }
+        .navbar__burger:hover {
+            cursor: pointer;
+        }
+        .burger-bar,
+        .burger-bar::before,
+        .burger-bar::after {
+            display: block;
+            width: 40px;
+            height: 3px;
+            position: relative;
+            border-radius: 3px;
+            background-color: $color_four;
+            transition: all 500ms ease-in-out
+        }
+        .burger-bar::before,
+        .burger-bar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+        .burger-bar::before {
+            transform: translateY(-12px);
+        }
+        .burger-bar::after {
+            transform: translateY(12px);
+        }
+        .show-nav .burger-bar::before {
+            transform: rotate(45deg);
+        }
+        .show-nav .burger-bar::after {
+            transform: rotate(-45deg);
+        }
+        .show-nav .burger-bar {
+            width: 0;
+            background: transparent;
+        }
+        /*** filtre Marque  ***/
+        .brand:hover {
+
+            p{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            a{
+                margin-left: 10px;
+                margin-right: 0;
+                margin-bottom: 10px;
+                padding: 10px;
+                display: block;
+            }
+            flex-wrap: wrap;
+            width: auto;
+            box-sizing: border-box;
+            border-left: 2px solid;
+            height: auto;
+        }
+        
+        .ampli {
+            font-size: 13px;
+            }
+        /*** image page produit ***/
+        .container_product_img{
+            width:80%;
+            height:300px;
+        }
+        /*** animation sur image page produit ***/
+        .product_img:hover{
+            transform: scale(1.2) perspective(600px);
+            transition: transform 300ms ease;
+        }
+        /*** bouton supprimer dans panier *****/
+        .delete_product{
+            text-transform: uppercase;
+            clip-path: rect(0, 15%, 15%,0);
+        }
+        /*** container formulaire panier ****/
+        .cart__order{
+            height: auto;
+        }
+        /**** form panier ***/
+        .cart__order__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5%;
+        }
+        /**** div label du formulaire panier ***/
+        .cart__order__form__question {
+            flex-direction: column;
+        }
+        /**** bouton commander panier ****/
+        .button_addtocart{
+            min-width:175px;
+        }
+        
+        footer {
+            font-size: 13px;
+        }
+    }  
+}
+@media all and (max-width: 475px){
+    #root{
+        .filters{
+            display: flex;
+            flex-direction: column;
+            width:65%;
+            height: auto;
+            box-sizing: border-box;
+        }
+        .filters_box{
+            margin-bottom: 15px;
+        }
+        /**** containers de la page order (commande validé) ****/
+                .order_ticket,
+                .summary_order,
+                .delivery{
+                    min-width: 250px;
+                }
+    }
+}

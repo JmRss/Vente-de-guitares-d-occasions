@@ -1,0 +1,39 @@
+.button_addtocart{
+    background-color: $color_secondary;
+    width:200px;
+    height:30px;
+    border-radius: 5px;
+    border-color: white;
+    color:white;
+    font-size: 20px;
+    font-family: 'Lobster';
+}
+
+.display-on {
+    display: flex;
+}
+.delete_product {
+    
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px white solid;
+    box-shadow:rgb(216 203 180 / 70%) 5px 5px 5px;
+    color:white;
+    background-color: $color_secondary;
+    border-radius: 15px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+.display-none {
+    display: none;
+}

@@ -1,0 +1,25 @@
+footer{
+    width: 100%;
+    min-height:220px;
+    margin-top: 100px;
+    background: darken($color_four, $amount: 10);
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    line-height: 30px;
+    color:white;
+    flex-wrap: wrap;
+}
+footer ul{
+    list-style-type: none;
+    padding: 0%;
+}
+footer a{
+    color: $color_five;
+    text-decoration: none;
+
+}
+.footer-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}

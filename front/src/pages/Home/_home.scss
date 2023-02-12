@@ -1,0 +1,65 @@
+.container_article {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 37px;
+    width:100%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 880px;
+    height: 520px;
+    background: linear-gradient(0.35turn,$color_five,$color_terciary,$color_five);
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+.cards_right {
+    color:$color_primary;
+    width: 390px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.cards_right .card {
+    height: 145px;
+    width: 340px;
+    margin: 15px;
+    display: inline-flex;
+}
+.cards_right .card img{
+    height: 145px;
+    width: 135px;
+    border-radius: 20px 0px 0px 20px;
+}
+.hebergement {
+    width: 100%;
+    color:$color_primary;
+    font-size: 24px;   
+    margin:0;
+    padding-left: 3%;
+}
+.cards_title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 83%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+.cards_right .card:hover{
+    transform: perspective(1000px) scale(1.1);
+    transition: all 150ms ease-in;
+}

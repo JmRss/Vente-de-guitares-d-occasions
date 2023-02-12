@@ -1,0 +1,38 @@
+.container_order{
+    width:100%;
+    min-height:80vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.order_ticket{
+    background-color: white;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+.order_ticket, .summary_order, .delivery{
+    width: 30%;
+    min-width:350px;
+}
+.orderId-color{
+    color: $color_secondary
+
+}
+.summary_order, .delivery{
+    background-color: $color_secondary;
+    color:$color_four;
+    padding: 10px;
+    ul{
+        list-style-type: none;
+    }
+}

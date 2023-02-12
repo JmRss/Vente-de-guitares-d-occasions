@@ -1,0 +1,34 @@
+@import './responsive';
+@import './utils/variable';
+@import './utils/keyframes';
+@import './pages/Home/home';
+@import './pages/Cart/cart';
+@import './components/Header/header';
+@import './components/Search/search';
+@import './components/Filters/filters';
+@import './components/Card/card';
+@import './components/Footer/footer';
+@import './components/Product/product';
+@import './components/ButtonAddToCart/button';
+@import './components/NavBar/navbar';
+@import './components/CustomForm/form';
+@import './components/OrderTicket/orderticket';
+
+
+body {
+    width: 1345px;
+    max-width: 1600px;
+    height: auto;
+    font-family: 'Lobster', sans-serif;
+    letter-spacing: 2px;
+    color:rgba(0, 0, 0, 0.791);
+    background-color: $color_terciary;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+.cards--filter-active{
+    width: 100%;
+}

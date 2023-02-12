@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    background: white;
+    border-radius: 20px 0px 20px 20px;
+}
+header h1,.cart h3 {
+    display: flex;
+    align-items: center;
+}
+.onglet{
+    display: inline-flex;
+    justify-content: space-between;  
+}
+.bestsell, .list, .cart {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    font-weight: lighter;
+    text-align: center;
+    border-top: 3px solid $color_secondary;
+    text-decoration: none;
+    color: $color_primary;
+    margin-right: 40px;
+    :hover{
+        transition: transform 300ms ease;
+        transform: scale(1.4);
+    }
+}
+.bestsell:hover, .list:hover, .cart:hover{
+    border-top: 3px solid $color_primary;
+    color:$color_secondary;
+}
+.logo{
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-left: 20px;
+    border: $color_primary 2px solid;
+}
+.logo:hover{
+    animation: logo 300ms ease-out both;
+}
+.navbar__burger{
+    width:40px;
+    height: 40px;
+    background:transparent;
+    border: none;
+    color:inherit;
+    display: none;
+}

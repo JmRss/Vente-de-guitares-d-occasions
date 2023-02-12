@@ -1,0 +1,15 @@
+@keyframes logo{
+    0%{ }
+    100%{transform: perspective(1000px) rotate(2turn) scale(1.5)}
+}
+@keyframes reset {
+    0% {}
+    100% {
+        transform: perspective(600px) rotate(1turn) scale(1.2)
+    }
+}
+
+@keyframes filter{
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
