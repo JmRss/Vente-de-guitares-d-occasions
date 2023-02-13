@@ -33,20 +33,23 @@ export default function CustomForm() {
 
   const fetchData = async (values) => {
     try {
-      const res = await fetch("http://localhost:4000/api/order", {
-        method: "POST",
-        body: JSON.stringify({
-          firstName: values.firstName,
-          lastName: values.lastName,
-          address: values.address,
-          city: values.city,
-          email: values.email,
-          basket: basket,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        "http://localhost:4000/.netlify/functions/api/order",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            firstName: values.firstName,
+            lastName: values.lastName,
+            address: values.address,
+            city: values.city,
+            email: values.email,
+            basket: basket,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const json = await res.json();
       localStorage.clear();
       navigate("/order", { state: { response: json.orderId } });

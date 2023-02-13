@@ -11,7 +11,7 @@ app.use(express.json()); // remplace body-parser
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "PUT", "POST", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"],
     credentials: true,
@@ -20,7 +20,7 @@ app.use(
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${process.env.MONGO_URL}`,
+    `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${process.env.URL}`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))

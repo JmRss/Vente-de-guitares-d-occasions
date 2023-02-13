@@ -6,7 +6,7 @@ export default function OrderTicket() {
   const location = useLocation();
   const orderId = location.state.response;
   const { isLoading, data, error } = useFetch(
-    `http://localhost:4000/api/order/${orderId}`
+    `http://localhost:4000/.netlify/functions/api/order/${orderId}`
   );
 
   //utilise la destructuration pour récupérer les données vouluent
